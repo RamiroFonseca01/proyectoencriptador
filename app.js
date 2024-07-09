@@ -5,7 +5,6 @@ const limpiarBtn = document.getElementById("limpiar");
 const texto = document.getElementById("texto");
 const resultContainer = document.querySelector(".result-container");
 
-// Objeto que contiene las llaves de encriptación
 const llavesEncriptacion = {
   e: "enter",
   i: "imes",
@@ -14,12 +13,10 @@ const llavesEncriptacion = {
   u: "ufat",
 };
 
-// Objeto que contiene las llaves de desencriptación (inverso de llavesEncriptacion)
 const llavesDesencriptacion = Object.fromEntries(
   Object.entries(llavesEncriptacion).map(([key, value]) => [value, key])
 );
 
-// Función para encriptar el texto
 function encriptar() {
   const textoEncriptado = texto.value
     .toLowerCase()
@@ -27,7 +24,6 @@ function encriptar() {
   mostrarResultado(textoEncriptado);
 }
 
-// Función para desencriptar el texto
 function desencriptar() {
   const textoDesencriptado = texto.value.replace(
     /enter|imes|ai|ober|ufat/g,
@@ -36,7 +32,6 @@ function desencriptar() {
   mostrarResultado(textoDesencriptado);
 }
 
-// Función para mostrar el resultado en el contenedor y habilitar/deshabilitar el botón de copiar
 function mostrarResultado(textoResultado) {
   if (textoResultado.trim() === "") {
     // Mostrar el mensaje de "Ningún mensaje fue encontrado"
@@ -48,7 +43,6 @@ function mostrarResultado(textoResultado) {
   }
 }
 
-// Función para copiar el resultado al portapapeles
 function copiar() {
   const textArea = document.createElement("textarea");
   textArea.value = resultContainer.textContent;
@@ -58,7 +52,6 @@ function copiar() {
   document.body.removeChild(textArea);
 }
 
-// Event listeners para los botones
 encriptarBtn.addEventListener("click", encriptar);
 desencriptarBtn.addEventListener("click", desencriptar);
 copiarBtn.addEventListener("click", copiar);
