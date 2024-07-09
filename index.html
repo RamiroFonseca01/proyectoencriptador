@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="./img/Logo.png" alt="logo principal" />
+    </header>
+    <main class="container">
+      <div class="input-container">
+        <textarea
+          id="texto"
+          class="title"
+          cols="20"
+          rows="8"
+          placeholder="Ingrese el texto aquí"
+        ></textarea>
+      </div>
+      <div class="indications">
+        <p class="text-in">
+          <img src="./img/Vector.png" alt="" /> Solo letras minúsculas y sin
+          acentos.
+        </p>
+      </div>
+      <div class="btn-container">
+        <button id="encriptar" class="btn-blue">
+          <span class="span-blue">Encriptar</span>
+        </button>
+        <button id="desencriptar" class="btn-gray">
+          <span class="span-gray">Desencriptar</span>
+        </button>
+      </div>
+      <div class="btn">
+        <button class="btn-gray" id="copiar">
+          <span class="span-gray">Copiar</span>
+        </button>
+        <button class="btn-blue" id="limpiar">
+          <span class="span-blue">Limpiar</span>
+        </button>
+      </div>
+      <aside class="aside">
+        <div class="result-container">
+          <img class="image" src="./img/Muneco.png" alt="" />
+          <div class="mensaje">
+            <h2>Ningún mensaje fue encontrado</h2>
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
